@@ -1,0 +1,57 @@
+@import "_minix.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    background: #eee;
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    @include box_flex;
+    @include justify(space-between);
+    @include align;
+    padding: 0 pxTorem(10px);
+    @include sizing;
+    background: rgba(0, 0, 0, .2);
+    .icon {
+        font-size: pxTorem(18px);
+    }
+    .list {
+        @include flex;
+        @include box_flex;
+        @include justify;
+        @include align;
+        li {
+            padding: 0 pxTorem(5px);
+            font-size: pxTorem(18px);
+        }
+    }
+}
+
+section {
+    width: 100%;
+    @include flex;
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(50px);
+    @include box_flex;
+    background: rgba(0, 0, 0, .2);
+    dl {
+        @include flex;
+        @include box_flex;
+        @include align;
+        @include justify;
+        dt {
+            >.icon {
+                font-size: pxTorem(20px);
+            }
+            font-size: pxTorem(18px);
+        }
+    }
+}
