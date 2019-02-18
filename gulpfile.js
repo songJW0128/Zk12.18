@@ -39,4 +39,4 @@ gulp.task('server', function() {
 
 gulp.task('default', gulp.series('sass', 'server', 'watch'))
 
-// gulp.task('build', gulp.series('js', 'css'))
+gulp.task('build', gulp.series('js', 'css'))
